@@ -12,11 +12,10 @@ const ingredients = [
     item: document.createElement('li'),
 
  } 
-
  
-ingredients.map(el => {
+ingredients.forEach(el => {
 let item = document.createElement('li');
-item.textContent = el;
+item.innerHTML = el;
 
 refs.ingredients.append(item);
     
