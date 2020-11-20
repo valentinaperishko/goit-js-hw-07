@@ -1,7 +1,7 @@
 
 const input = document.getElementById('validation-input');
 // console.log(input);
-input.addEventListener('input', (event) => {
+input.addEventListener('blur', (event) => {
 // console.log(input.value.length);
 // console.log(event.target.dataset.length);
 let inputLength = event.target.value.length;

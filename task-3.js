@@ -17,18 +17,14 @@ const images = [
   ];
 
   
-    const gallery = document.getElementById('gallery');
-  
-    images.map((el, index) => {
-    let {url, alt} = el;
-        gallery.insertAdjacentHTML('beforeend', '<li><img width="200px", height="150px"></li>');
-        let images = gallery.querySelectorAll('img');
-    images[index].setAttribute('src', url);
-    images[index].setAttribute('alt', alt);
-    console.log(images, index);
-     
-               
-    })
+const makeGallery = ({ url, alt }) =>
+  `<li><img src="${url}" alt="${alt}" width='200' height='150'></li>`;
+const gallery = images.reduce((acc, item) => acc + makeGallery(item),
+  ""
+);
+const galleryList = document.querySelector("#gallery");
+galleryList.insertAdjacentHTML("afterbegin", gallery);
+
    
 
 
