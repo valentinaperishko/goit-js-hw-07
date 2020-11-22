@@ -2,6 +2,8 @@ const refs = {
     category: document.querySelector('#category'),
     item: document.querySelectorAll('.item'),
 }
+let messageSecond = `В списке ${refs.item.length} категории`
+console.log(messageSecond);
 
 refs.item.forEach(el => {
     let title = el.children[0].textContent;
@@ -11,5 +13,5 @@ refs.item.forEach(el => {
     let messageSecond = `В списке ${number} категории`
     
     console.log(message);
-    console.log(messageSecond);
+    
 })

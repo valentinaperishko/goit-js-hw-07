@@ -20,8 +20,7 @@ const images = [
 const makeGallery = ({ url, alt }) =>
   `<li><img src="${url}" alt="${alt}" width='200' height='150'></li>`;
 const gallery = images.reduce((acc, item) => acc + makeGallery(item),
-  ""
-);
+  "");
 const galleryList = document.querySelector("#gallery");
 galleryList.insertAdjacentHTML("afterbegin", gallery);
 
